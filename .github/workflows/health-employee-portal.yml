@@ -1,0 +1,45 @@
+---
+name: Employee Portal Health
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check Employee Portal
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    env:
+      NAME: "Employee Portal"
+      URL: "https://petclinic-emp-portal.benmusicgeek.synology.me/login"
+      ACCEPTED_CODES: "200 301 302"
+    steps:
+      - name: Probe endpoint
+        run: |
+          # -L follows redirects, -m 10 caps the whole request at 10 s
+          status=$(curl -L -m 10 -s -o /dev/null \
+            -w "%{http_code}" "$URL") && rc=0 || rc=$?
+
+          echo "URL:       $URL"
+          echo "HTTP code: $status (curl exit code: $rc)"
+
+          # Timeout, DNS failure, refused connection, TLS error...
+          if [ "$rc" -ne 0 ]; then
+            echo "::error::$NAME is DOWN (curl exit code $rc)"
+            exit 1
+          fi
+
+          for code in $ACCEPTED_CODES; do
+            if [ "$status" = "$code" ]; then
+              echo "$NAME is UP (HTTP $status)"
+              exit 0
+            fi
+          done
+
+          echo "::error::$NAME is DOWN (HTTP $status)"
+          exit 1

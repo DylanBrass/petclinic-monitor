@@ -9,12 +9,13 @@ live status badge.
 
 ## Status
 
-| Service | Endpoint | Status |
-| --- | --- | --- |
-| Main Portal | https://petclinic.benmusicgeek.synology.me/ | [![Main Portal Health](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-main-portal.yml/badge.svg)](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-main-portal.yml) |
-| Backend API | https://petclinic-backend.benmusicgeek.synology.me/actuator/health | [![Backend API Health](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-backend-api.yml/badge.svg)](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-backend-api.yml) |
-| Employee Portal | https://petclinic-emp-portal.benmusicgeek.synology.me/login | [![Employee Portal Health](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-employee-portal.yml/badge.svg)](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-employee-portal.yml) |
-| Management UI | https://petclinic-management-ui.benmusicgeek.synology.me/login | [![Management UI Health](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-management-ui.yml/badge.svg)](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-management-ui.yml) |
+
+| Service         | Endpoint                                                           | Status                                                                                                                                                                                                                            |
+|-----------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Customer Portal | https://petclinic.benmusicgeek.synology.me/                        | [![Customer Portal Health](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-customer-portal.yml/badge.svg)](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-customer-portal.yml) |
+| Backend API     | https://petclinic-backend.benmusicgeek.synology.me/actuator/health | [![Backend API Health](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-backend-api.yml/badge.svg)](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-backend-api.yml)             |
+| Employee Portal | https://petclinic-emp-portal.benmusicgeek.synology.me/login        | [![Employee Portal Health](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-employee-portal.yml/badge.svg)](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-employee-portal.yml) |
+| Management UI   | https://petclinic-management-ui.benmusicgeek.synology.me/login     | [![Management UI Health](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-management-ui.yml/badge.svg)](https://github.com/DylanBrass/petclinic-monitor/actions/workflows/health-management-ui.yml)       |
 
 A green badge means the last check passed. A red badge means it failed.
 Click a badge to see the run history and logs for that service.

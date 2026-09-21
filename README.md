@@ -74,6 +74,3 @@ goes down, the check fails and the badge turns red.
 - **Scheduled workflows are paused** after 60 days without activity in the
   repository. If the checks stop, re-enable the workflows from the Actions
   tab or push a small commit.
-- **Failure emails.** GitHub can email you for each failed scheduled run, so a
-  long outage may produce many emails. Adjust this under
-  Settings → Notifications → Actions.

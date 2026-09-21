@@ -59,7 +59,7 @@ goes down, the check fails and the badge turns red.
 
 ## Add another service
 
-1. Copy one of the workflow files, for example `health-main-portal.yml`, to
+1. Copy one of the workflow files, for example `health-customer-portal.yml`, to
    `.github/workflows/health-<name>.yml`.
 2. Change the workflow `name:` and the `NAME` and `URL` values in `env:`.
 3. Add a row for it in the status table above, pointing the badge at the

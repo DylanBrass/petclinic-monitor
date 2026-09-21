@@ -46,7 +46,7 @@ goes down, the check fails and the badge turns red.
 
 | Workflow | Service |
 | --- | --- |
-| `health-main-portal.yml` | Main Portal |
+| `health-customer-portal.yml` | Customer Portal |
 | `health-backend-api.yml` | Backend API |
 | `health-employee-portal.yml` | Employee Portal |
 | `health-management-ui.yml` | Management UI |
